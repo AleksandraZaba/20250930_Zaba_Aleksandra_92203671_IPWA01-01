@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>style.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #8c8c8c; font-style: italic;}
+.s1 { color: #080808;}
+.s2 { color: #0033b3;}
+.s3 { color: #174ad4;}
+.s4 { color: #080808;}
+.s5 { color: #1750eb;}
+.s6 { color: #067d17;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+style.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* Definiert die maximale Höhe und Breite des HTML- und body-Elements auf 100%, um sicherzustellen, dass sie nicht über den viewport hinausragen. */</span>
+<span class="s2">html</span><span class="s1">, </span><span class="s2">body </span><span class="s1">{</span>
+    <span class="s3">max-height</span><span class="s4">: </span><span class="s5">100</span><span class="s1">%;</span>
+    <span class="s3">max-width</span><span class="s4">: </span><span class="s5">100</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Setzt die Zeilenhöhe für den body-Bereich auf das Golden Ratio (ca. 1.618) für bessere Lesbarkeit. */</span>
+<span class="s2">body </span><span class="s1">{</span>
+    <span class="s3">line-height</span><span class="s4">: </span><span class="s5">1.618</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Definiert Stile für die Navigationsleiste. */</span>
+<span class="s1">.</span><span class="s2">navbar </span><span class="s1">{</span>
+    <span class="s3">position</span><span class="s4">: </span><span class="s6">relative</span><span class="s1">; </span><span class="s0">/* Positioniert das Element relativ zu seiner normalen Position. */</span>
+    <span class="s3">overflow</span><span class="s4">: </span><span class="s6">hidden</span><span class="s1">; </span><span class="s0">/* Verhindert, dass der Inhalt über den Container hinausläuft. */</span>
+    <span class="s3">border</span><span class="s4">: </span><span class="s6">solid black</span><span class="s1">; </span><span class="s0">/* Fügt einen schwarzen, durchgehenden Rahmen hinzu. */</span>
+    <span class="s3">background-color</span><span class="s4">: </span><span class="s2">#FE621D</span><span class="s1">; </span><span class="s0">/* Setzt die Hintergrundfarbe. */</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Beginnt eine Media-Abfrage, die Stile nur auf Bildschirmen mit einer maximalen Breite von 600px anwendet. */</span>
+<span class="s2">@media </span><span class="s6">screen </span><span class="s2">and </span><span class="s1">(</span><span class="s3">max-width</span><span class="s4">: </span><span class="s5">600</span><span class="s6">px</span><span class="s1">) {</span>
+    <span class="s0">/* Setzt die Schriftgröße für Elemente mit der Klasse &quot;flex-item-left&quot; auf 3.42% der viewport-Breite (vw). */</span>
+    <span class="s1">.</span><span class="s2">flex-item-left </span><span class="s1">{</span>
+        <span class="s3">font-size</span><span class="s4">: </span><span class="s5">3.42</span><span class="s6">vw</span><span class="s1">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Setzt die Textfarbe für alle input-Elemente auf Schwarz. 
+input { 
+    color: black; 
+}*/</span>
+
+<span class="s0">/* Style-Definitionen für Eingabefelder und select-Boxen. */</span>
+<span class="s0">/* Hier werden nur input-Felder vom Typ text und select-Elemente angesprochen. */</span>
+<span class="s2">input</span><span class="s1">[</span><span class="s2">type</span><span class="s1">=</span><span class="s2">text</span><span class="s1">] </span><span class="s0">/*, input[type=number],*/ </span><span class="s2">select </span><span class="s0">/*, textarea*/</span>
+<span class="s1">{</span>
+    <span class="s3">border</span><span class="s4">: </span><span class="s5">0.19</span><span class="s6">vw black solid</span><span class="s1">; </span><span class="s0">/* Fügt einen schwarzen, durchgehenden Rahmen hinzu. */</span>
+    <span class="s3">border-radius</span><span class="s4">: </span><span class="s5">0</span><span class="s1">; </span><span class="s0">/* Entfernt abgerundete Ecken. */</span>
+    <span class="s3">box-sizing</span><span class="s4">: </span><span class="s6">border-box</span><span class="s1">; </span><span class="s0">/* Stellt sicher, dass Polsterung und Rahmen in die Gesamtbreite des Elements einbezogen werden. */</span>
+    <span class="s3">resize</span><span class="s4">: </span><span class="s6">vertical</span><span class="s1">; </span><span class="s0">/* Erlaubt die vertikale Größenänderung durch den Benutzer. */</span>
+    <span class="s3">color</span><span class="s4">: </span><span class="s6">black</span><span class="s1">; </span><span class="s0">/* Setzt die Textfarbe auf Schwarz. */</span>
+    <span class="s3">max-height</span><span class="s4">: </span><span class="s5">100</span><span class="s1">%; </span><span class="s0">/* Begrenzt die maximale Höhe auf 100%. */</span>
+    <span class="s3">max-width</span><span class="s4">: </span><span class="s5">100</span><span class="s1">%; </span><span class="s0">/* Begrenzt die maximale Breite auf 100%. */</span>
+
+<span class="s1">}</span>
+
+<span class="s0">/* Definiert Stile für label-Elemente. */</span>
+<span class="s2">label </span><span class="s1">{</span>
+    <span class="s3">display</span><span class="s4">: </span><span class="s6">flex</span><span class="s1">; </span><span class="s0">/* Erstellt einen Flexbox-Container. */</span>
+    <span class="s3">flex-direction</span><span class="s4">: </span><span class="s6">column</span><span class="s1">; </span><span class="s0">/* Stapelt die Elemente vertikal. */</span>
+    <span class="s3">max-width</span><span class="s4">: </span><span class="s5">38</span><span class="s6">vw</span><span class="s1">; </span><span class="s0">/* Setzt die maximale Breite auf 38% der Viewport-Breite. */</span>
+    <span class="s3">line-height</span><span class="s4">: </span><span class="s5">1.618</span><span class="s1">; </span><span class="s0">/* Setzt die Zeilenhöhe. */</span>
+    <span class="s3">margin-bottom</span><span class="s4">: </span><span class="s5">0.95</span><span class="s6">vw</span><span class="s1">; </span><span class="s0">/* Setzt den unteren Außenabstand. */</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Setzt die Zeilenhöhe für br-Elemente (Zeilenumbrüche). */</span>
+<span class="s2">br </span><span class="s1">{</span>
+    <span class="s3">line-height</span><span class="s4">: </span><span class="s5">1.618</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Definiert Stile für aufklappbare (collapsible) Elemente. */</span>
+<span class="s1">.</span><span class="s2">collapsible </span><span class="s1">{</span>
+    <span class="s3">color</span><span class="s4">: </span><span class="s6">black</span><span class="s1">; </span><span class="s0">/* Setzt die Textfarbe auf Schwarz. */</span>
+    <span class="s3">cursor</span><span class="s4">: </span><span class="s6">pointer</span><span class="s1">; </span><span class="s0">/* Ändert den Mauszeiger zu einem Zeiger, wenn er über das Element fährt. */</span>
+    <span class="s3">padding</span><span class="s4">: </span><span class="s5">1.71</span><span class="s6">vw</span><span class="s1">; </span><span class="s0">/* Setzt den Innenabstand. */</span>
+    <span class="s3">max-width</span><span class="s4">: </span><span class="s5">100</span><span class="s1">%; </span><span class="s0">/* Begrenzt die maximale Breite. */</span>
+    <span class="s3">border</span><span class="s4">: </span><span class="s5">0.1</span><span class="s6">vw black solid</span><span class="s1">; </span><span class="s0">/* Fügt einen schwarzen, durchgehenden Rahmen hinzu. */</span>
+    <span class="s3">text-align</span><span class="s4">: </span><span class="s6">left</span><span class="s1">; </span><span class="s0">/* Richtet den Text linksbündig aus. */</span>
+    <span class="s3">outline</span><span class="s4">: </span><span class="s6">none</span><span class="s1">; </span><span class="s0">/* Entfernt den Umriss, der bei Fokus erscheint. */</span>
+    <span class="s3">font-size</span><span class="s4">: </span><span class="s5">1.43</span><span class="s6">vw</span><span class="s1">; </span><span class="s0">/* Setzt die Schriftgröße. */</span>
+    <span class="s3">background-color</span><span class="s4">: </span><span class="s2">#FF8C00</span><span class="s1">; </span><span class="s0">/* Setzt die Hintergrundfarbe. */</span>
+<span class="s1">}</span>
+<span class="s0">/* Definiert Stile für den aktiven (aufgeklappten) Zustand und den hover-Zustand. */</span>
+<span class="s1">.</span><span class="s2">active</span><span class="s1">, .</span><span class="s2">collapsible</span><span class="s4">:</span><span class="s2">hover </span><span class="s1">{</span>
+    <span class="s3">background-color</span><span class="s4">: </span><span class="s2">#EBF5EE</span><span class="s1">; </span><span class="s0">/* Ändert die Hintergrundfarbe. */</span>
+<span class="s1">}</span>
+<span class="s0">/* Definiert Stile für den Inhalt der aufklappbaren Elemente. */</span>
+<span class="s1">.</span><span class="s2">content </span><span class="s1">{</span>
+    <span class="s3">padding</span><span class="s4">: </span><span class="s5">0 1.71</span><span class="s6">vw</span><span class="s1">; </span><span class="s0">/* Setzt den Innenabstand. */</span>
+    <span class="s3">display</span><span class="s4">: </span><span class="s6">none</span><span class="s1">; </span><span class="s0">/* Blendet den Inhalt standardmäßig aus. */</span>
+    <span class="s3">overflow</span><span class="s4">: </span><span class="s6">hidden</span><span class="s1">; </span><span class="s0">/* Verhindert, dass der Inhalt über den Container hinausläuft. */</span>
+    <span class="s3">background-color</span><span class="s4">: </span><span class="s2">#FE621D</span><span class="s1">; </span><span class="s0">/* Setzt die Hintergrundfarbe. */</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>FAQs.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #8c8c8c; font-style: italic;}
+.s1 { color: #080808;}
+.s2 { color: #0033b3;}
+.s3 { color: #067d17;}
+.s4 { color: #1750eb;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FAQs.js</font>
+</center></td></tr></table>
+<pre><span class="s0">// Wählt alle Elemente mit der Klasse &quot;collapsible&quot; aus und speichert sie in der Variable `coll` als HTMLCollection.</span>
+<span class="s2">var </span><span class="s1">coll = document.getElementsByClassName(</span><span class="s3">&quot;collapsible&quot;</span><span class="s1">);</span>
+<span class="s0">// Deklariert eine Variable i, die als Zähler für die Schleife verwendet wird.</span>
+<span class="s2">var </span><span class="s1">i;</span>
+<span class="s0">// Beginnt eine Schleife, die über alle Elemente in der HTMLCollection coll iteriert.</span>
+<span class="s2">for </span><span class="s1">(i = </span><span class="s4">0</span><span class="s1">; i &lt; coll.length; i++) {</span>
+    <span class="s0">// Fügt jedem Element einen click-Event-Listener hinzu.</span>
+    <span class="s1">coll[i].addEventListener(</span><span class="s3">&quot;click&quot;</span><span class="s1">, </span><span class="s2">function </span><span class="s1">() {</span>
+        <span class="s0">// Fügt dem geklickten Element die Klasse active hinzu oder entfernt sie, um den Zustand zu ändern. Dies kann zum Styling verwende werden (z.B. Aenderung der Hintergrundfarbe.)</span>
+        <span class="s2">this</span><span class="s1">.classList.toggle(</span><span class="s3">&quot;active&quot;</span><span class="s1">);</span>
+        <span class="s0">// Wählt das unmittelbar folgende Element (den Inhalt) aus.</span>
+        <span class="s2">var </span><span class="s1">content = </span><span class="s2">this</span><span class="s1">.nextElementSibling;</span>
+        <span class="s0">// Überprüft, ob der Anzeigestil des Inhaltselements block ist (also sichtbar).</span>
+        <span class="s2">if </span><span class="s1">(content.style.display === </span><span class="s3">&quot;block&quot;</span><span class="s1">) {</span>
+            <span class="s0">// Wenn ja, ändert den Anzeigestil auf none, um es auszublenden.</span>
+            <span class="s1">content.style.display = </span><span class="s3">&quot;none&quot;</span><span class="s1">;</span>
+        <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+            <span class="s0">// Andernfalls ändert den Anzeigestil auf block, um es einzublenden.</span>
+            <span class="s1">content.style.display = </span><span class="s3">&quot;block&quot;</span><span class="s1">;</span>
+        <span class="s1">}</span>
+    <span class="s1">});</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
